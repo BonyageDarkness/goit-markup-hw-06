@@ -60,6 +60,10 @@ section {
 .header {
     border-bottom: 1px solid #E7E9FC;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    background-color: #fff;
 }
 
 .header-container {
@@ -308,7 +312,7 @@ section {
     line-height: 1.11;
     letter-spacing: 0.02em;
     text-align: center;
-    max-width: 288px;
+    max-width: 216px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -617,18 +621,21 @@ section {
 
 .footer {
     background: #2E2F42;
-    padding: 100px 0;
+    padding: 96px 0;
     background-position: center;
 }
 
 .footer-container {
     display: flex;
-    align-items: baseline;
+    /* align-items: baseline; */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     
 }
 
 .footer-logo {
-    display: inline-block;
+    display: block;
     color: #4d5ae5;
     font-family: 'Raleway', sans-serif;
     font-size: 18px;
@@ -637,10 +644,12 @@ section {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     margin-bottom: 16px;
+    text-align: center;
 }
 
 .footer-cont-logo {
-    margin-right: 120px;
+    /* margin-right: 120px; */
+    margin-bottom: 72px;
 }
 
 .footer-logo-blue {
@@ -660,6 +669,8 @@ section {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+
+    margin-bottom: 72px;
 }
 
 .social-media-text {
@@ -669,6 +680,8 @@ section {
     line-height: 1.5;
     letter-spacing: 0.02em;
     margin-bottom: 16px;
+
+    text-align: center;
 }
 
 .social-medias {
@@ -704,12 +717,16 @@ section {
 .footer-sub {
     display: flex;
     flex-direction: column;
-    padding-left: 80px;
+    /* padding-left: 80px; */
 }
 
 .footer-form {
     display: flex;
-    gap: 24px;
+    /* gap: 24px; */
+    gap: 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer-input::placeholder {
@@ -728,11 +745,14 @@ section {
     font-size: 12px;
     line-height: 2;
     letter-spacing: 0.04em;
+
+    opacity: 0.3;
 }
 
 .footer-form-btn {
     height: 40px;
-    min-width: 165px;
+    /* min-width: 165px; */
+    max-width: 165px;
     color: #FFF;
     text-align: center;
     font-family: "Roboto", sans-serif;
@@ -776,25 +796,28 @@ section {
     visibility: hidden;
     position: none;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+    z-index: 2;
 }
 
 .is-open {
-    opacity: 1;
+    opacity: 0;
     visibility: visible; 
     pointer-events: auto;
 }
 
 .modal {
-    width: 408px;
-    min-height: 584px;
+    /* width: 408px;
+    min-height: 584px; */
+    width: 288px;
+    min-height: 623px;
     border-radius: 4px;
     background-color: #FCFCFC;
     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.20);
     position: absolute;
     top: 50%;
     left: 50%;
-    padding: 72px 24px 24px 24px;
+    /* padding: 72px 24px 24px 24px; */
+    padding: 72px 16px 24px;
     transform: translate(-50%, -50%) scale(1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -946,9 +969,17 @@ section {
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
-    margin-bottom: 8px;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
+}
+
+.modal-input::placeholder {
+    color: #8E8F99;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
 }
 
 .modal-text:focus {
@@ -1014,6 +1045,7 @@ section {
 .send-button:focus {
     background-color: #404BBF;
 }
+
 
 /* ------@media------*/
 
@@ -1120,8 +1152,64 @@ section {
     margin-left: auto;
 }
 
-    
+/* --------FOOTER----------     */
+
+.footer {
 }
+
+.footer-container {
+    align-items: baseline;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 24px;
+    padding-left: 108px;
+}
+
+.footer-logo {
+    text-align: start;
+}
+
+.footer-social {
+    margin-bottom: 0;
+}
+
+.social-media-text {
+    text-align: start;
+}
+
+.footer-form {
+    gap: 24px;
+    flex-direction: row;
+}
+
+.footer-cont-logo {
+    margin-bottom: 48px;
+}
+
+
+
+/* ----------MODAL---------- */
+
+.modal {
+    width: 408px;
+    min-height: 584px;
+    padding: 72px 24px 24px 24px;
+}
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
 @media screen and (min-width:1158px) {
     /* ------HEADER------- */
     .header-logo {
@@ -1174,6 +1262,7 @@ section {
     /* --------TEAM------- */
     .container {
         max-width: 1158px;
+        padding: 0 15px;
     }
     .team {
         padding: 120px 0;
@@ -1217,6 +1306,33 @@ section {
         background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/people-office-1-2x.jpg);
     }
 }
+
+/* ---------FOOTER--------- */
+
+.footer {
+    padding: 100px 0;
+}
+
+.footer-container {
+    align-items: baseline;
+    flex-wrap: nowrap;
+    justify-content: start;
+    gap: 0;
+}
+
+.footer-cont-logo {
+    margin-bottom: 0;
+    margin-right: 120px;
+}
+
+.footer-social {
+    margin-right: 80px;
+}
+
+.footer-input {
+    opacity: 1;
+}
+
 
 }
 
