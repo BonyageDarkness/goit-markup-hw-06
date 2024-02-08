@@ -59,7 +59,7 @@
           </svg>
         </button>
       </div>
-      <div class="mob-menu">
+      <div class="mob-menu is-open-mob container">
         <div>
           <button type="button" class="button-close-btn">
             <svg width="8" height="8">
@@ -81,6 +81,7 @@
               </li>
             </ul>
           </nav>
+        </div>
           <address class="mob-address">
             <ul class="mob-address-list">
               <li class="mob-address-item">
@@ -94,8 +95,7 @@
                 >
               </li>
             </ul>
-          </address>
-        </div>
+          </address>        
         <ul class="mob-soc-media-list">
           <li class="mob-soc-media-item">
             <a href="" target="_blank" class="mob-soc-media-link">
@@ -387,7 +387,7 @@
                     media="(min-width: 1158px)"
                   />
                   <source
-                    srcset="./images/our1.jpg 1x, ./images/our1-2x.jpg 2x"
+                    srcset="./images/our1-tablet.jpg 1x, ./images/our1-tablet-2x.jpg 2x"
                     media="(min-width: 768px)"
                   />
                   <source
@@ -425,7 +425,7 @@
                     media="(min-width: 1158px)"
                   />
                   <source
-                    srcset="./images/our2.jpg 1x, ./images/our2-2x.jpg 2x"
+                    srcset="./images/our2-tablet.jpg 1x, ./images/our2-tablet-2x.jpg 2x"
                     media="(min-width: 768px)"
                   />
                   <source
@@ -463,7 +463,7 @@
                     media="(min-width: 1158px)"
                   />
                   <source
-                    srcset="./images/our3.jpg 1x, ./images/our3-2x.jpg 2x"
+                    srcset="./images/our3-tablet.jpg 1x, ./images/our3-tablet-2x.jpg 2x"
                     media="(min-width: 768px)"
                   />
                   <source
@@ -497,11 +497,11 @@
               <div class="portfolio-wrap">
                 <picture>
                   <source
-                    srcset="./images/our4.jpg 1x, ./images/our4-2x,jpg 2x"
+                    srcset="./images/our4.jpg 1x, ./images/our4-2x.jpg 2x"
                     media="(min-width: 1158px)"
                   />
                   <source
-                    srcset="./images/our4.jpg 1x, ./images/our4-2x.jpg 2x"
+                    srcset="./images/our4-tablet.jpg 1x, ./images/our4-tablet-2x.jpg 2x"
                     media="(min-width: 768px)"
                   />
                   <source
@@ -539,7 +539,7 @@
                     media="(min-width: 1158px)"
                   />
                   <source
-                    srcset="./images/our5.jpg 1x, ./images/our5-2x.jpg 2x"
+                    srcset="./images/our5-tablet.jpg 1x, ./images/our5-tablet-2x.jpg 2x"
                     media="(min-width: 768px)"
                   />
                   <source
@@ -577,7 +577,7 @@
                     media="(min-width: 1158px)"
                   />
                   <source
-                    srcset="./images/our6.jpg 1x, ./images/our6-2x.jpg 2x"
+                    srcset="./images/our6-tablet.jpg 1x, ./images/our6-tablet-2x.jpg 2x"
                     media="(min-width: 768px)"
                   />
                   <source
@@ -677,7 +677,7 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop is-open">
+    <div class="backdrop is-open-modal">
       <div class="modal">
         <button type="button" class="modal-close-btn">
           <svg class="modal-close-icon" width="8" height="8">
@@ -761,9 +761,10 @@
                   <use href="./images/icons.svg#icon-click"></use>
                 </svg>
               </span>
-              I accept the terms and conditions of the
-              <a href="" class="priv-pol-text">Privacy Policy</a></label
-            >
+              <span class="privacy-text">I accept the terms and conditions of the
+                <a href="" class="priv-pol-text">Privacy Policy</a></label
+              >
+              </span>
           </div>
           <button class="send-button" type="submit">Send</button>
         </form>
